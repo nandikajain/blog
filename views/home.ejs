@@ -5,9 +5,8 @@
 
 <% allPosts.forEach((element)=>{ %>
   <h1>  <%=element.title  %></h1>
-<% var route_title="/posts/" + element.title  %>
-<% console.log(route_title);   %>
-<p> <%=element.content.slice(0,100)+" ... "%><a href= <%=route_title %> >Read More</a>
+
+<p> <%=element.content.slice(0,100)+" ... "%><a href= "/posts/<%=element.title%>" >Read More</a>
 </p>
   <%});%>
 
