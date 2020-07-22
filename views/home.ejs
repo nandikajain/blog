@@ -1,0 +1,14 @@
+<%- include("partials/header")  -%>
+
+<h1>Home</h1>
+<p><%= homeContent  %></p>
+
+<% allPosts.forEach((element)=>{ %>
+  <h1>  <%=element.title  %></h1>
+<% var route_title="/posts/" + element.title  %>
+<% console.log(route_title);   %>
+<p> <%=element.content.slice(0,100)+" ... "%><a href= <%=route_title %> >Read More</a>
+</p>
+  <%});%>
+
+<%- include("partials/footer")  -%>
